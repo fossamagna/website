@@ -20,9 +20,9 @@ const backend = defineBackend({
 const dataResources = backend.data.resources;
 
 dataResources.cfnResources.cfnGraphqlApi.xrayEnabled = true;
-// Object.values(dataResources.cfnResources.amplifyDynamoDbTables).forEach((table) => {
-//   table.pointInTimeRecoveryEnabled = true;
-// });
+Object.values(dataResources.cfnResources.amplifyDynamoDbTables).forEach((table) => {
+  table.pointInTimeRecoveryEnabled = true;
+});
 
 
 // === Subscribers ===
